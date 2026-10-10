@@ -1,0 +1,46 @@
+.ra-page { display: flex; flex-direction: column; gap: 22px; }
+.ra-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.ra-heading h2 { margin: 4px 0 8px; font-size: clamp(1.6rem, 3vw, 2rem); color: #20213b; }
+.ra-heading p:not(.eyebrow) { margin: 0; color: #73758a; line-height: 1.55; }
+.ra-heading-icon { width: 58px; height: 58px; flex: 0 0 58px; display: grid; place-items: center; border-radius: 18px; background: #eeeaff; color: #6c4ce5; font-size: 2rem; }
+.ra-note { padding: 13px 16px; border: 1px solid #e5e0ff; border-radius: 12px; background: #f8f6ff; color: #55516e; line-height: 1.5; font-size: .92rem; }
+.ra-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 20px; align-items: start; }
+.ra-grid-lower { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); }
+.ra-card { min-width: 0; padding: 22px; border: 1px solid #ececf4; border-radius: 18px; background: #fff; box-shadow: 0 5px 22px rgba(36, 33, 79, .035); }
+.ra-card h3 { margin: 5px 0 18px; color: #24243e; font-size: 1.12rem; }
+.ra-card-title { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.ra-score-mark { width: 35px; height: 35px; display: grid; place-items: center; border-radius: 12px; color: #25865e; background: #e8f8f0; font-weight: 800; }
+.ra-score { display: flex; align-items: baseline; gap: 5px; margin: 22px 0 14px; }
+.ra-score strong { font-size: 3.3rem; line-height: 1; color: #6046d8; letter-spacing: -2px; }
+.ra-score span { color: #8a8ba0; }
+.ra-progress { height: 9px; overflow: hidden; border-radius: 99px; background: #eeedf6; }
+.ra-progress > div { height: 100%; border-radius: inherit; background: linear-gradient(90deg, #7357e8, #9b84f4); transition: width .25s ease; }
+.ra-muted { color: #7b7c90; font-size: .88rem; line-height: 1.5; }
+.ra-score-card .primary-solid { margin-top: 12px; }
+.ra-success { margin: 12px 0 0; color: #25865e; font-size: .88rem; }
+.ra-checklist { display: flex; flex-direction: column; }
+.ra-check-row { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid #f0f0f6; font-size: .9rem; }
+.ra-check-row:last-child { border-bottom: 0; }
+.ra-check-row > span:nth-child(2) { flex: 1; }
+.ra-check-icon { width: 23px; height: 23px; flex: 0 0 23px; display: grid; place-items: center; border-radius: 50%; color: #a36b26; background: #fff3df; font-size: .78rem; font-weight: 800; }
+.ra-check-icon.is-filled { color: #23865e; background: #e5f7ee; }
+.ra-status-good, .ra-status-missing { font-size: .78rem; font-weight: 700; }
+.ra-status-good { color: #23865e; }
+.ra-status-missing { color: #b77a25; }
+.ra-suggestions { margin: 0; padding-left: 20px; color: #5f6077; line-height: 1.65; font-size: .92rem; }
+.ra-suggestions li { margin: 0 0 10px; padding-left: 3px; }
+.ra-label { display: block; margin-bottom: 8px; color: #55566c; font-size: .9rem; font-weight: 600; }
+.ra-job-input { display: block; width: 100%; box-sizing: border-box; resize: vertical; padding: 12px 13px; border: 1px solid #e3e3ee; border-radius: 10px; color: #292941; background: #fcfcff; font: inherit; line-height: 1.5; outline: none; }
+.ra-job-input:focus { border-color: #8c78ed; box-shadow: 0 0 0 3px rgba(108, 76, 229, .1); }
+.ra-match-area { margin-top: 18px; }
+.ra-match-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; color: #505168; font-size: .9rem; }
+.ra-match-head strong { color: #6046d8; font-size: 1.2rem; }
+.ra-keyword-group { margin-top: 17px; }
+.ra-keyword-group > strong { display: block; margin-bottom: 9px; color: #55566c; font-size: .86rem; }
+.ra-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.ra-tag { display: inline-flex; padding: 5px 9px; border-radius: 7px; background: #f4f1e9; color: #82652c; font-size: .78rem; overflow-wrap: anywhere; }
+.ra-tag-good { background: #e8f7ef; color: #247c59; }
+.ra-empty-match { margin-bottom: 0; }
+.ra-footer { padding: 3px 2px; color: #85869a; font-size: .85rem; }
+@media (max-width: 900px) { .ra-grid, .ra-grid-lower { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .ra-heading { align-items: flex-start; } .ra-heading-icon { width: 45px; height: 45px; flex-basis: 45px; border-radius: 14px; } .ra-card { padding: 17px; } .ra-score strong { font-size: 2.8rem; } .ra-check-row { gap: 8px; font-size: .83rem; } .ra-status-good, .ra-status-missing { font-size: .7rem; } }
